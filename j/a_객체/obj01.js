@@ -68,3 +68,4 @@ console.log('===============================');
 delete book1.auther;
 console.log(book1);
 console.log('auther' in book1);
+
