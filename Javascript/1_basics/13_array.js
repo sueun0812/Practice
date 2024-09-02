@@ -106,6 +106,7 @@ console.log(numbers); // 내림차순
 console.log('------------------------');
 
 // map()
+// 배열의 모든 값을 순회하며 파라미터(x)에 넣어줌
 console.log(iveMembers.map((x) => x));
 console.log(iveMembers.map((x) => `아이브 : ${x}`));
 
@@ -117,4 +118,27 @@ console.log(iveMembers.map((x) => {
   }
 }));
 
-console.log(iveMembers);
+console.log(iveMembers);  // [ '장원영', '이서', '아이브 : 안유진', '리즈', '레이', '가을' ]
+
+// filter()
+// true인 경우 값을 반환해줌
+numbers = [1, 8, 7, 6, 3];
+
+console.log(numbers.filter((x) => x % 2 === 0));  // [ 8, 6 ]
+
+// find()
+// 첫번째 true인 값만 반환해줌
+console.log(numbers.find((x) => x % 2 === 0));  // 8
+
+// findIndex()
+// find와 동일하며 차이점은 index를 반환해줌
+console.log(numbers.findIndex((x) => x % 2 === 0));  // 1 (8이라는 숫자의 인덱스)
+
+// reduce()
+console.log(numbers.reduce((p, n) => p + n, 0));  // 25
+//                           파라미터 1    | 파라미터 2
+
+// 배열명.reduce((이전값, 배열 처음~끝 순회) => 조건식, 초기값) 
+// numbers = [1, 8, 7, 6, 3];
+// 0 + 1, 1 + 8, 9 + 7, 16 + 6, 22 + 3 : 25
+
